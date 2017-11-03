@@ -1,0 +1,3 @@
+<div [class]="showSmall?'gridlistSmall':'gridlist'">
+  <app-tilebutton *ngFor="let tile1 of getTiles()" [tile]="tile1" [small]="showSmall"></app-tilebutton>
+</div>

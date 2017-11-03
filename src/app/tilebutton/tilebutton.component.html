@@ -1,0 +1,16 @@
+<div [ngClass]="'tilecover'+showSmall">
+  <!--<a mat-button *ngIf="showSmall!=='Small';else onlylink" routerLink="{{tile.link}}" [ngClass]="'tilebutton'" (click)="emitTileClicked()">
+   <img src="{{tile.imgsrc}}" style="max-width:100%;max-height:100%;" />
+  </a>
+  <ng-template #onlylink>
+    <a mat-button routerLink="{{tile.link}}" [ngClass]="'tilebutton'+showSmall" (click)="emitTileClicked()">
+   <img src="{{tile.imgsrc}}" style="max-width:100%;max-height:100%;" />
+  </a>
+  </ng-template>-->
+  <a mat-button routerLink="{{tile.link}}" [ngClass]="'tilebutton'+showSmall" (click)="emitTileClicked()">
+   <img src="{{tile.imgsrc}}" style="max-width:80%;max-height:80%;"  matTooltip="{{tile.text}}" [matTooltipPosition]="'right'" [matTooltipDisabled]="!showSmall" />
+   </a>
+  <div [ngClass]="'tilelabel'+showSmall">
+    <h3>{{tile.text}}</h3>
+  </div>
+</div>

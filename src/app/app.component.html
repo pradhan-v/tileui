@@ -1,0 +1,16 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav class="dns-sidenav" mode="side" opened="false">
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+
+  <div class="dns-sidenav-content">
+
+    <mat-toolbar color="primary">
+      <div class="titleback">{{title}}</div>
+      <div class="title">{{title}}</div>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+
+  </div>
+</mat-sidenav-container>
